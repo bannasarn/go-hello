@@ -1,6 +1,8 @@
 package foo
 
-import "fmt"
+import (
+	"strconv"
+)
 
 func String(n int) string {
 	if n == 3 {
@@ -8,5 +10,5 @@ func String(n int) string {
 	} else if n == 5 {
 		return "Bar"
 	}
-	return fmt.Sprintf("%d", n)
+	return strconv.Itoa(n)
 }
