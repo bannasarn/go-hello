@@ -30,7 +30,12 @@ func main() {
 	p = append(p, 17, 19)
 	fmt.Println(cap(p), len(p))
 	fmt.Println(primes[3])
-	fmt.Println(p[3])
+	fmt.Println(p[4])
+
+	fmt.Println("Loop Slice as below")
+	for i, v := range p {
+		fmt.Println(i, v) //ถ้าไม่ใช่ i ให้ใส่ _ แทนตรง for
+	}
 }
 
 // func isPrime(n int) bool {
