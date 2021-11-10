@@ -6,6 +6,20 @@ import (
 	"github.com/bannasarn/go-hello/foo"
 )
 
+// func TestFooBar(t *testing.T) {
+// 	type spec struct {
+// 		given int
+// 		want  string
+// 	}
+// 	specs := []spec{
+// 		{given: 1, want: "1"},
+// 		{given: 2, want: "2"},
+// 		{given: 3, want: "Foo"},
+// 		{given: 4, want: "4"},
+// 		{given: 5, want: "Bar"},
+// 	}
+// }
+
 func TestFooBarGiven1Wants1(t *testing.T) {
 	given := 1
 	want := "1"

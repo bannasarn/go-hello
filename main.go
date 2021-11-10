@@ -1,21 +1,39 @@
 package main
 
 import (
-	"github.com/bannasarn/go-hello/basicsyntax"
+	"encoding/csv"
+	"log"
+	"os"
 )
 
 func main() {
-	basicsyntax.Print("Biggs")
-	basicsyntax.PackageVariableWithZeroValue()
-	basicsyntax.Variable()
-	basicsyntax.IfElse()
-	basicsyntax.Array()
-	basicsyntax.Len()
-	basicsyntax.Slice()
-	basicsyntax.SliceExample2()
-	basicsyntax.Map()
-	basicsyntax.ForLoop()
-	basicsyntax.WhileLoop()
-	basicsyntax.ForRange()
-	basicsyntax.Function()
+	exerciseOscar()
+}
+
+func exerciseOscar() {
+	// Open File
+	f, err := os.Open("/Users/bannasarn/Downloads/oscar.csv")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Read File
+	r := csv.NewReader(f)
+	records, err := r.ReadAll()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Map record into name
+	name := make(map[string]int)
+	for _, record := range records {
+		name[record[3]] += 1
+	}
+
+	// Filter value more than 1
+	for k, v := range name {
+		if v > 1 {
+			println(k)
+		}
+	}
 }
