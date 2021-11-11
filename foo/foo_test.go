@@ -20,7 +20,7 @@ import (
 // 	}
 // }
 
-func TestFooBarGiven1Wants1(t *testing.T) {
+func TestFooBarGiven1Want1(t *testing.T) {
 	given := 1
 	want := "1"
 
@@ -31,7 +31,7 @@ func TestFooBarGiven1Wants1(t *testing.T) {
 	}
 }
 
-func TestFooBarGiven2Wants2(t *testing.T) {
+func TestFooBarGiven2Want2(t *testing.T) {
 	given := 2
 	want := "2"
 
@@ -42,7 +42,7 @@ func TestFooBarGiven2Wants2(t *testing.T) {
 	}
 }
 
-func TestFooBarGiven3WantsFoo(t *testing.T) {
+func TestFooBarGiven3WantFoo(t *testing.T) {
 	given := 3
 	want := "Foo"
 
@@ -53,7 +53,7 @@ func TestFooBarGiven3WantsFoo(t *testing.T) {
 	}
 }
 
-func TestFooBarGiven4Wants4(t *testing.T) {
+func TestFooBarGiven4Want4(t *testing.T) {
 	given := 4
 	want := "4"
 
@@ -64,8 +64,63 @@ func TestFooBarGiven4Wants4(t *testing.T) {
 	}
 }
 
-func TestFooBarGiven5WantsBar(t *testing.T) {
+func TestFooBarGiven5WantBar(t *testing.T) {
 	given := 5
+	want := "Bar"
+
+	get := foo.String(given)
+
+	if want != get {
+		t.Errorf("given %d want %q but get %q\n", given, want, get)
+	}
+}
+
+func TestFooBarGiven6WantFoo(t *testing.T) {
+	given := 6
+	want := "Foo"
+
+	get := foo.String(given)
+
+	if want != get {
+		t.Errorf("given %d want %q but get %q\n", given, want, get)
+	}
+}
+
+func TestFooBarGiven7Want7(t *testing.T) {
+	given := 7
+	want := "7"
+
+	get := foo.String(given)
+
+	if want != get {
+		t.Errorf("given %d want %q but get %q\n", given, want, get)
+	}
+}
+
+func TestFooBarGiven8Want8(t *testing.T) {
+	given := 8
+	want := "8"
+
+	get := foo.String(given)
+
+	if want != get {
+		t.Errorf("given %d want %q but get %q\n", given, want, get)
+	}
+}
+
+func TestFooBarGiven9WantFoo(t *testing.T) {
+	given := 9
+	want := "Foo"
+
+	get := foo.String(given)
+
+	if want != get {
+		t.Errorf("given %d want %q but get %q\n", given, want, get)
+	}
+}
+
+func TestFooBarGiven10WantBar(t *testing.T) {
+	given := 10
 	want := "Bar"
 
 	get := foo.String(given)
