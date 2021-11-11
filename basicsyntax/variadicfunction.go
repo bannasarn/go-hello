@@ -4,11 +4,11 @@ import "fmt"
 
 func VariadicFunction() {
 	primes := []int{1, 3, 5, 7}
-	printSlice(primes...)
+	printSlice("hello", primes...)
 }
 
-func printSlice(i ...int) {
+func printSlice(s string, i ...int) {
 	for _, v := range i {
-		fmt.Println(v)
+		fmt.Println(s, v)
 	}
 }

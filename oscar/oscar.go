@@ -25,10 +25,10 @@ func Oscar() {
 	// Map record into name
 	name := make(map[string]int)
 	for _, record := range records {
-		name[record[3]] += 1
+		name[record[3]]++
 	}
 
-	// Filter value more than 1
+	// // Filter value more than 1
 	for k, v := range name {
 		if v > 1 {
 			println(k)

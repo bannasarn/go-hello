@@ -49,3 +49,15 @@ func SliceExample2() {
 	fmt.Printf("This y = %v\n", y)
 
 }
+
+func Pic(dx, dy int) [][]uint8 {
+	var result [][]uint8
+	for y := 0; y < dy; y++ {
+		var a []uint8
+		for x := 0; x < dx; x++ {
+			a = append(a, uint8(x*y))
+		}
+		result = append(result, a)
+	}
+	return result
+}
