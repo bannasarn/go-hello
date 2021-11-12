@@ -5,7 +5,10 @@ import (
 )
 
 func String(n int) string {
-	if n%3 == 0 {
+
+	if n%3 == 0 && n%5 == 0 {
+		return "FooBar"
+	} else if n%3 == 0 {
 		return "Foo"
 	} else if n%5 == 0 {
 		return "Bar"
