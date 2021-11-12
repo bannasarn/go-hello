@@ -1,5 +1,7 @@
 package main
 
-func main() {
+import "github.com/bannasarn/go-hello/basicsyntax"
 
+func main() {
+	basicsyntax.Struct()
 }
