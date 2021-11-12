@@ -3,12 +3,20 @@ package basicsyntax
 import "fmt"
 
 func Pointer() {
-	var p *string
-	var s string = "xxx"
+	var x int = 69
+	var px *int = &x
 
-	p = &s
-	fmt.Println(s, p, &s)
+	fmt.Printf("value x = %v\n", x)
+	fmt.Printf("address x = %v\n", &x)
 
-	*p = "yyy"
-	fmt.Println(s, p, &s)
+	fmt.Printf("value y = %v\n", *px)
+	fmt.Printf("address y = %v\n", px)
+
+	*px = 0
+
+	fmt.Printf("value x = %v\n", x)
+	fmt.Printf("address x = %v\n", &x)
+
+	fmt.Printf("value y = %v\n", *px)
+	fmt.Printf("address y = %v\n", px)
 }
