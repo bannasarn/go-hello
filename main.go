@@ -3,5 +3,5 @@ package main
 import "github.com/bannasarn/go-hello/basicsyntax"
 
 func main() {
-	basicsyntax.Struct()
+	basicsyntax.Defer2()
 }
