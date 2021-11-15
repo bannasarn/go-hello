@@ -1,4 +1,4 @@
-package main
+package apifoobar
 
 import (
 	"encoding/json"
